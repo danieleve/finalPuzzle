@@ -7,12 +7,11 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-    
-    
 
     const usuario  = {
         usuario: req.body.username,
-        clave: req.body.password
+        clave: req.body.password,
+        id_rols: 2
     }
 
     console.log(usuario);
@@ -20,7 +19,7 @@ router.post('/', (req, res) => {
     knex('users')
       .where(usuario).first().then((user) => {
           if(user!=undefined){
-            res.redirect('usuarios');
+            res.redirect('options');
           } else {
               res.redirect('login')
           }
@@ -30,8 +29,5 @@ router.post('/', (req, res) => {
 
 
 });
-
-
-
 
 module.exports = router;

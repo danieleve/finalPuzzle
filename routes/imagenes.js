@@ -3,8 +3,6 @@ const router = express.Router();
 
 const knex = require('../db/knex');
 
-
-
 /* This router is mounted at /todo */
 router.get('/', (req, res) => {
   knex('images')

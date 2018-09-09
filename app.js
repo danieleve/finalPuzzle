@@ -13,8 +13,10 @@ var usuarios = require('./routes/usuarios');
 var imagenes = require('./routes/imagenes');
 var roles = require('./routes/roles');
 var audios = require('./routes/audios');
+var options = require('./routes/options');
 
 var login = require('./routes/login');
+var seleccionrompecabeza = require('./routes/seleccionrompecabeza');
 
 var app = express();
 
@@ -46,8 +48,10 @@ app.use('/usuarios', usuarios);
 app.use('/imagenes', imagenes);
 app.use('/roles', roles);
 app.use('/audios', audios);
-
+app.use('/options', options);
 app.use('/login', login);
+app.use('/seleccionrompecabeza', seleccionrompecabeza);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
