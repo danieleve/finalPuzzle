@@ -13,10 +13,17 @@
         -->
         {{#each users}}
               
-              <td><a href="#" id="avatar"><img class="rounded-circle" src="{{urlimagen}}" ></a></td>
-
+              <td><a href="seleccionrompecabeza" onclick="guardarUser({{id}})" id="avatar"><img class="rounded-circle" src="{{urlimagen}}" ></a></td>
+                <td>{{puntaje}}</td>
         {{/each}}  
     </table>
+
     <div class="row d-flex justify-content-center pie">
             <a href="login">Ir a Administración</a>
     </div>
+
+<script>
+    function guardarUser(variable){
+        localStorage.setItem("usuario", variable);
+    }
+</script>

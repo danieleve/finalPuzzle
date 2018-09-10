@@ -9,8 +9,26 @@ router.get('/', function(req, res){
        .then( images => {
         res.render('seleccionrompecabeza', {images: images});
     });
+
+    //knex('users')
+    // .where('id', )
+    // .then( users => {
+    //  res.render('seleccionrompecabeza', {users: users});
+    //});
     
   });
   
+  router.get('/puntos/:id', function(req, res){
+
+    const id = req.params.id;
+
+    knex('users')
+     .where('id', id)
+     .first()
+     .then( user => {
+      res.json({user: user});
+    });
+    
+  });
 
 module.exports = router;

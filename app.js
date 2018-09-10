@@ -14,9 +14,9 @@ var imagenes = require('./routes/imagenes');
 var roles = require('./routes/roles');
 var audios = require('./routes/audios');
 var options = require('./routes/options');
-
 var login = require('./routes/login');
 var seleccionrompecabeza = require('./routes/seleccionrompecabeza');
+var juego = require('./routes/juego');
 
 var app = express();
 
@@ -51,6 +51,7 @@ app.use('/audios', audios);
 app.use('/options', options);
 app.use('/login', login);
 app.use('/seleccionrompecabeza', seleccionrompecabeza);
+app.use('/juego', juego);
 
 
 // catch 404 and forward to error handler
