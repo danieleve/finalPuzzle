@@ -137,6 +137,13 @@
                                 if ($('.snappuzzle-piece.correct.'+puzzle_class).length == o.rows*o.columns)
                                     {
                                         o.onComplete(that);
+                                        let url = window.origin;
+                                        $.post( url+"/seleccionrompecabeza/puntos/"+localStorage.getItem("usuario"), function( data ) {
+
+                                            //console.log(data)
+                                            //$("#puntaje").html("<p>"+data.user.puntaje+"</p>");
+                                
+                                        });
                                         //alert("Ganaste");
                                         //window.location = '/seleccionrompecabeza';
                                     }

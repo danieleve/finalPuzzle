@@ -85,9 +85,9 @@
 
     <script>
 
-let url = window.origin;
+    let url = window.origin;
 
-        $.getJSON( url+"/seleccionrompecabeza/puntos/1", function( data ) {
+        $.getJSON( url+"/seleccionrompecabeza/puntos/"+localStorage.getItem("usuario"), function( data ) {
 
             console.log(data)
 

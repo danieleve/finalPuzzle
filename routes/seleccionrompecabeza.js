@@ -31,4 +31,17 @@ router.get('/', function(req, res){
     
   });
 
+  router.post('/puntos/:id', function(req, res){
+
+    const id = req.params.id;
+
+    knex('users')
+    .increment('puntaje', 1)
+     .where('id', id)
+     .then( user => {
+      res.json({user: user});
+    });
+    
+  });
+
 module.exports = router;
