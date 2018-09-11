@@ -81,7 +81,7 @@ function validateTodoRenderError(req, res, callback) {
       usuario: req.body.usuario,
       clave: req.body.clave,
       puntaje: req.body.puntaje,
-      urlimagen: req.body.urlimagen
+      urlimagen: req.body.url
     };
     
     callback(users);
